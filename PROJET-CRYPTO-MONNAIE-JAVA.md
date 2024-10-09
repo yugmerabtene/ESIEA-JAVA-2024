@@ -36,7 +36,8 @@ Votre première mission est de développer une **application Java en ligne de co
 
 #### Notation (sur 12 points) :
 - Connexion à l’API et récupération des données : 4 points
-- Affichage correct du **prix des cryptomonnaies** : 4 points
+- Affichage correct du **prix des cryptomonnaies** : 2 points
+- Diargamme de classe correcte : 2 points 
 - Respect des principes **SOLID** et **Clean Code** : 3 points
 - Gestion des **exceptions** : 1 point
 
@@ -68,8 +69,9 @@ Dans cette deuxième itération, vous allez **étendre l’application** pour qu
 - **Gestion des exceptions** : Ajoutez des blocs d'exceptions plus précis pour gérer des erreurs spécifiques.
 
 #### Notation (sur 16 points) :
-- Récupération et affichage des **variations** et du **classement** : 5 points
+- Récupération et affichage des **variations** et du **classement** : 3 points
 - Ajout de la sélection de cryptomonnaies : 3 points
+- Diargamme de classe correcte : 2 points 
 - Respect des principes **SOLID** et **refactorisation** : 5 points
 - Gestion des **exceptions avancées** : 3 points
 
@@ -98,8 +100,9 @@ Pour cette troisième itération, vous allez ajouter une fonctionnalité de **su
 - **Architecture SOLID** : Continuez à appliquer les principes SOLID en structurant les différentes couches de votre application (API, base de données, suivi).
 
 #### Notation (sur 20 points) :
-- Mise en place du **suivi continu** et des tendances : 6 points
+- Mise en place du **suivi continu** et des tendances : 4 points
 - Stockage dans une **base de données NoSQL** : 5 points
+- Diargamme de classe correcte : 2 points 
 - Respect des principes **SOLID** et architecture propre : 4 points
 - Gestion des **exceptions** liées à la base de données : 2 points
 
