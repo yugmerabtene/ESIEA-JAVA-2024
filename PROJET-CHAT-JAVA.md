@@ -41,7 +41,8 @@ Votre première mission est de concevoir une **application de chat en ligne de c
 #### Notation (sur 12 points) :
 - Respect des principes **POO** : 3 points
 - Utilisation des **threads** et gestion multi-utilisateurs : 3 points
-- Application des principes **SOLID** et **Clean Code** : 4 points
+- Application des principes **SOLID** et **Clean Code** : 2 points
+- Diargamme de classe correcte : 2 points  
 - Gestion correcte des **exceptions** : 2 points
 
 ---
@@ -72,9 +73,10 @@ Dans cette deuxième itération, vous allez **ajouter une couche de chiffrement*
 - **Gestion des exceptions** : Ajoutez des blocs `try-catch` pour traiter les erreurs de chiffrement.
 
 #### Notation (sur 16 points) :
-- Implémentation correcte du **chiffrement** : 5 points
+- Implémentation correcte du **chiffrement** : 3 points
 - Tests avec **Wireshark** (avant et après chiffrement) : 4 points
 - Gestion des **exceptions liées au chiffrement** : 3 points
+- Diargamme de classe correcte : 2 points 
 - Respect des principes **SOLID** et **Clean Code** (adaptation du code pour le chiffrement) : 4 points
 
 ---
@@ -107,7 +109,8 @@ Pour cette troisième itération, vous allez ajouter une **base de données NoSQ
 - Intégration de **Redis** et stockage chiffré des messages : 6 points
 - Implémentation du **chiffrement des données** dans Redis : 5 points
 - Gestion correcte des **connexions Redis** : 3 points
-- Respect des principes **SOLID** et **Clean Code** : 4 points
+- Diargamme de classe correcte : 2 points   
+- Respect des principes **SOLID** et **Clean Code** : 2 points
 - Gestion des **exceptions liées à Redis et au chiffrement** : 2 points
 
 ---
