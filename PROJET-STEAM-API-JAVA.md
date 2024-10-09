@@ -35,8 +35,9 @@ Votre première mission est de développer une **application Java en ligne de co
 - **Gestion des exceptions** : Traitez les erreurs liées aux connexions réseau et à la récupération des données.
 
 #### Notation (sur 12 points) :
-- Connexion à l’API et récupération des données : 4 points
-- Affichage correct du **prix des jeux** : 4 points
+- Connexion à l’API et récupération des données : 3 points
+- Diargamme de classe correcte : 2 points
+- Affichage correct du **prix des jeux** : 3 points
 - Respect des principes **SOLID** et **Clean Code** : 3 points
 - Gestion des **exceptions** : 1 point
 
@@ -72,7 +73,8 @@ Dans cette deuxième itération, vous allez **améliorer l'application** en perm
 - **Gestion des exceptions** : Ajoutez des blocs `try-catch` plus précis pour gérer des erreurs spécifiques.
 
 #### Notation (sur 16 points) :
-- Recherche de **jeux par titre** : 5 points
+- Recherche de **jeux par titre** : 3 points
+- Diargamme de classe correcte : 2 points
 - Affichage des **détails des jeux** : 4 points
 - Respect des principes **SOLID** et refactorisation : 5 points
 - Gestion des **exceptions avancées** : 2 points
@@ -107,7 +109,8 @@ Pour cette troisième itération, vous allez ajouter une fonctionnalité de **cl
 - **Architecture SOLID** : Continuez à appliquer les principes SOLID en structurant les différentes couches de votre application.
 
 #### Notation (sur 20 points) :
-- Mise en place du **classement des jeux populaires** : 6 points
+- Mise en place du **classement des jeux populaires** : 4 points
+- Diargamme de classe correcte : 2 points
 - Suivi des **jeux et historique des prix/évaluations** : 5 points
 - Stockage dans une **base de données NoSQL** : 5 points
 - Respect des principes **SOLID** et architecture propre : 3 points
