@@ -27,8 +27,9 @@ L'application interrogera l'API gratuite ImpactCO2 pour obtenir des données sur
   - **Gestion des exceptions** : Gérez les erreurs liées aux connexions réseau et à la récupération des données.
 
 - **Notation (sur 12 points)** :
-  - Connexion à l'API et récupération des données : 4 points
-  - Affichage correct des émissions de CO2 : 4 points
+  - Connexion à l'API et récupération des données : 3 points
+  - Affichage correct des émissions de CO2 : 3 points
+  - Diargamme de classe correcte : 2 points
   - Respect des principes SOLID et Clean Code : 3 points
   - Gestion des exceptions : 1 point
 
@@ -54,7 +55,8 @@ L'application interrogera l'API gratuite ImpactCO2 pour obtenir des données sur
   - **Gestion des exceptions** : Ajoutez des blocs d'exceptions pour gérer des erreurs spécifiques.
 
 - **Notation (sur 16 points)** :
-  - Récupération et affichage des émissions pour plusieurs activités : 5 points
+  - Récupération et affichage des émissions pour plusieurs activités : 3 points
+  - Diargamme de classe correcte : 2 points
   - Ajout de la sélection d'activités : 3 points
   - Respect des principes SOLID et refactorisation : 5 points
   - Gestion des exceptions avancée : 3 points
@@ -80,7 +82,8 @@ L'application interrogera l'API gratuite ImpactCO2 pour obtenir des données sur
   - **Architecture SOLID** : Continuez à appliquer les principes SOLID en structurant les différentes couches de votre application (API, base de données, suivi).
 
 - **Notation (sur 20 points)** :
-  - Mise en place du suivi continu et des tendances : 6 points
+  - Mise en place du suivi continu et des tendances : 4 points
+  - Diargamme de classe correcte : 2 points
   - Stockage dans une base de données NoSQL : 5 points
   - Respect des principes SOLID et architecture propre : 4 points
   - Gestion des exceptions liées à la base de données : 2 points
