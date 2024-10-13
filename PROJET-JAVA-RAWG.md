@@ -94,7 +94,7 @@ Pour cette troisième itération, vous ajouterez une fonctionnalité permettant 
 #### Spécifications supplémentaires :
 - **Suivi des favoris** : Implémentez une fonctionnalité pour sauvegarder les jeux préférés.
 - **Base de données NoSQL** : Utilisez MongoDB ou Redis pour stocker et historiser les favoris.
-- **Architecture SOLID** : Structurez les différentes couches de votre application.
+- **Architecture Applicative** : Structurez les différentes couches de votre application selon une architecture coherente ( MVC multicouche ou micro service, etc...).
 
 #### Notation (sur 20 points) :
 - Mise en place du **suivi des jeux préférés** : 4 points
