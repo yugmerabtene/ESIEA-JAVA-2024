@@ -279,7 +279,7 @@ public class MainDynamique {
     }
 
     public static User getUserType() {
-        return new Administrator(); // Peut retourner un Administrator ou un Subscriber
+        return new Administrator(); // Peut retourner un Administrator ou un Subscriber dans ce cas de figure c'est Administrator
     }
 }
 ```
