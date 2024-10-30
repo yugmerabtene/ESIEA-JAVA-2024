@@ -294,6 +294,20 @@ Dans ce cas, la méthode `login()` appelée dépend de l'objet instancié par `g
 Le polymorphisme avec interfaces permet de manipuler différents types d'objets qui implémentent une même interface, sans héritage direct.
 
 ##### Code
+## Package polymorphisme_interface
+
+**Classe User.java**
+```java
+package polymorphisme_interface;
+
+public class User {
+    public void login() {
+        System.out.println("User logged in.");
+    }
+}
+
+```
+
 
 **Interface `Authenticable.java`**
 ```java
