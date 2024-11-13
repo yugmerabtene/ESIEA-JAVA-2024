@@ -1,40 +1,65 @@
-### Exercice : Interfaces et Implémentation de Classes avec Encapsulation et Accesseurs
+### Structure des Fichiers
+```
+src/
+│
+├── Main.java
+├── interfaces/
+│   ├── Voler.java
+│   ├── Nager.java
+│   ├── Marcher.java
+│   └── Grimper.java
+│
+├── classes/
+    ├── Oiseau.java
+    ├── Poisson.java
+    └── Chat.java
+```
 
-#### Interfaces
-1. **Interface `Voler`** : Méthode `void voler()`.
-2. **Interface `Nager`** : Méthode `void nager()`.
-3. **Interface `Marcher`** : Méthode `void marcher()`.
-4. **Interface `Grimper`** : Méthode `void grimper()`.
+### Code de chaque fichier
 
-#### Classes qui implémentent ces interfaces
-1. **Classe `Oiseau`** : Implémente `Voler` et `Marcher`.
-2. **Classe `Poisson`** : Implémente `Nager`.
-3. **Classe `Chat`** : Implémente `Marcher` et `Grimper`.
-
-### Exemple de Code en Java avec Encapsulation
-
+**1. Fichier `src/interfaces/Voler.java`**
 ```java
-// Interface Voler
-interface Voler {
+package interfaces;
+
+public interface Voler {
     void voler();
 }
+```
 
-// Interface Nager
-interface Nager {
+**2. Fichier `src/interfaces/Nager.java`**
+```java
+package interfaces;
+
+public interface Nager {
     void nager();
 }
+```
 
-// Interface Marcher
-interface Marcher {
+**3. Fichier `src/interfaces/Marcher.java`**
+```java
+package interfaces;
+
+public interface Marcher {
     void marcher();
 }
+```
 
-// Interface Grimper
-interface Grimper {
+**4. Fichier `src/interfaces/Grimper.java`**
+```java
+package interfaces;
+
+public interface Grimper {
     void grimper();
 }
+```
 
-// Classe Oiseau
+**5. Fichier `src/classes/Oiseau.java`**
+```java
+package classes;
+
+import interfaces.Voler;
+import interfaces.Marcher;
+
 public class Oiseau implements Voler, Marcher {
     private String nom;
 
@@ -60,8 +85,14 @@ public class Oiseau implements Voler, Marcher {
         System.out.println(nom + " marche sur ses pattes.");
     }
 }
+```
 
-// Classe Poisson
+**6. Fichier `src/classes/Poisson.java`**
+```java
+package classes;
+
+import interfaces.Nager;
+
 public class Poisson implements Nager {
     private String nom;
 
@@ -82,8 +113,15 @@ public class Poisson implements Nager {
         System.out.println(nom + " nage dans l'eau.");
     }
 }
+```
 
-// Classe Chat
+**7. Fichier `src/classes/Chat.java`**
+```java
+package classes;
+
+import interfaces.Marcher;
+import interfaces.Grimper;
+
 public class Chat implements Marcher, Grimper {
     private String nom;
 
@@ -109,8 +147,14 @@ public class Chat implements Marcher, Grimper {
         System.out.println(nom + " grimpe aux arbres.");
     }
 }
+```
 
-// Classe principale pour tester
+**8. Fichier `src/Main.java`**
+```java
+import classes.Oiseau;
+import classes.Poisson;
+import classes.Chat;
+
 public class Main {
     public static void main(String[] args) {
         // Instanciation des objets
@@ -145,7 +189,8 @@ public class Main {
 }
 ```
 
-### Instructions
-1. **Encapsulation** : Les attributs `nom` sont privés, et des méthodes getter et setter sont fournies pour accéder et modifier ces attributs.
-2. **Classe principale `Main`** : Instancie des objets de chaque classe et utilise leurs méthodes pour vérifier le fonctionnement.
-3. **Résultat attendu** : Les détails des comportements (`voler`, `marcher`, `nager`, `grimper`) et la mise à jour des noms doivent être affichés dans la console.
+### Instructions pour la Compilation
+1. Créez les répertoires `src/interfaces` et `src/classes` dans votre projet.
+2. Placez chaque fichier de code dans son répertoire correspondant.
+3. Compilez et exécutez `Main.java` pour tester le fonctionnement complet.
+
