@@ -193,4 +193,5 @@ public class Main {
 1. Créez les répertoires `src/interfaces` et `src/classes` dans votre projet.
 2. Placez chaque fichier de code dans son répertoire correspondant.
 3. Compilez et exécutez `Main.java` pour tester le fonctionnement complet.
+4. On peux aussi créer un constructeur vide dans les classes et éviter de définir les attributs lors de l'intanciation de l'objet pour les set avec les setters et afficher les attributs avec les getters.  
 
