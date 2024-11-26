@@ -1,6 +1,6 @@
-## **Concepts Clés : Classes Normales, Interfaces, et Classes Abstraites**
+## **Concepts Clés : Classes concrètes, Interfaces, et Classes Abstraites**
 
-### **1. Classes Normales**
+### **1. Classes concrètes**
 - **Instanciables directement** : Représentent des entités complètes.
 - **Contiennent des attributs et des méthodes concrètes**.
 
@@ -138,7 +138,7 @@ public class SubscriptionManager {
 
 ### **6. Tableau Comparatif**
 
-| **Aspect**       | **Classe Normale**        | **Interface**                       | **Classe Abstraite**                |
+| **Aspect**       | **Classe concrètes**        | **Interface**                       | **Classe Abstraite**                |
 |-------------------|---------------------------|-------------------------------------|--------------------------------------|
 | **Instanciable**  | Oui                       | Non                                 | Non                                  |
 | **Héritage**      | Une seule classe parente  | Multiples implémentations possibles | Une seule classe parente            |
@@ -148,7 +148,7 @@ public class SubscriptionManager {
 ---
 
 ### **Résumé**
-- **Classes normales** : Pour des entités instanciables directement.
+- **Classes concrètes** : Pour des entités instanciables directement.
 - **Interfaces** : Pour définir des comportements spécifiques et garantir la modularité.
 - **Classes abstraites** : Pour structurer un système avec des fonctionnalités partagées et flexibles.
 
