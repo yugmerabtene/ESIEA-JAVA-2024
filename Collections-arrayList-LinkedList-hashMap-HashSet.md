@@ -1,4 +1,4 @@
-## 1-LinkedList
+## 1-arrayList
 ### EXO-01  
 ### Structure des Fichiers
 ```
