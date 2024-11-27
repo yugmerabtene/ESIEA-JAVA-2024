@@ -325,7 +325,7 @@ public class Main {
 }
 ```
 
-### Explication du Design
+### Explication de l'architecture MVC
 - **Interfaces (`IUserService`, `IUserController`)** : Fournissent un contrat que les classes `UserService` et `UserController` implémentent, permettant de respecter les principes SOLID (interface segregation).
 - **`ArrayList`** : Utilisée dans la classe `UserService` pour gérer dynamiquement la liste des utilisateurs, ajoutant et accédant facilement aux données.
 - **Couche de service** : Contient la logique métier liée à la gestion des utilisateurs.
