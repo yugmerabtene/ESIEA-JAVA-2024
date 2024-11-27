@@ -1,4 +1,110 @@
 ## 1-arrayList
+
+Une **ArrayList** en Java est une structure de données basée sur un tableau dynamique qui permet de stocker des éléments (objets) de manière flexible, sans avoir besoin de spécifier sa taille initiale.
+
+---
+
+### **Caractéristiques principales d'une ArrayList**
+
+1. **Taille dynamique** :
+   - Une ArrayList ajuste automatiquement sa taille pour s'adapter aux ajouts ou suppressions d'éléments.
+
+2. **Accès rapide par index** :
+   - L'accès à un élément via son index est direct et très rapide (\(O(1)\)).
+
+3. **Permet les doublons** :
+   - Une ArrayList peut contenir plusieurs fois la même valeur.
+
+4. **Ordre des éléments** :
+   - L'ordre d'insertion des éléments est conservé.
+
+5. **Pas thread-safe** :
+   - L'utilisation dans des environnements multi-threads nécessite une synchronisation explicite.
+
+---
+
+### **Fonctionnement des opérations dans une ArrayList**
+
+#### 1. **Ajout d'un élément**
+- Les éléments sont ajoutés à la fin par défaut.
+- Si la capacité actuelle est insuffisante, l'ArrayList crée un tableau plus grand et copie les anciens éléments.
+
+**Complexité** :
+- \(O(1)\) pour un ajout simple.
+- \(O(n)\) si un redimensionnement est nécessaire.
+
+#### 2. **Accès à un élément**
+- L'accès à un élément se fait directement via son index.
+
+**Complexité** : \(O(1)\).
+
+#### 3. **Suppression d'un élément**
+- Après suppression, les éléments suivants sont déplacés pour combler l'espace.
+
+**Complexité** : \(O(n)\).
+
+#### 4. **Recherche d'un élément**
+- La recherche d'un élément nécessite un parcours de la liste.
+
+**Complexité** : \(O(n)\).
+
+---
+
+### **Exemple avec ArrayList**
+
+#### Création et manipulation
+```java
+import java.util.ArrayList;
+
+public class Example {
+    public static void main(String[] args) {
+        // Création d'une ArrayList
+        ArrayList<String> list = new ArrayList<>();
+
+        // Ajout d'éléments
+        list.add("Alice");
+        list.add("Bob");
+        list.add("Charlie");
+
+        // Affichage des éléments
+        System.out.println("Liste : " + list);
+
+        // Accès à des éléments
+        System.out.println("Premier élément : " + list.get(0));
+        System.out.println("Deuxième élément : " + list.get(1));
+
+        // Suppression d'un élément
+        list.remove(1); // Supprime l'élément à l'index 1 (Bob)
+        System.out.println("Liste après suppression : " + list);
+
+        // Recherche d'un élément
+        boolean containsAlice = list.contains("Alice");
+        System.out.println("Contient 'Alice' ? " + containsAlice);
+
+        // Taille de la liste
+        System.out.println("Taille de la liste : " + list.size());
+    }
+}
+```
+
+---
+
+### **Quand utiliser une ArrayList ?**
+
+1. **Accès rapide par index** :
+   - Idéal si vous accédez souvent aux éléments par leur position.
+
+2. **Ajout principalement à la fin** :
+   - Les ajouts en fin de liste sont rapides et efficaces.
+
+3. **Peu de suppressions ou réarrangements** :
+   - Une ArrayList est plus efficace lorsque les suppressions ou réarrangements d'éléments sont rares.
+
+---
+
+
+
+
 ### EXO-01  
 ### Structure des Fichiers
 ```
