@@ -33,6 +33,59 @@ public class Main {
 }
 ```
 **Explication** : La variable `count` est partagée, donc sa valeur est la même pour toutes les instances de la classe.
+---
+Si la variable `count` n'était **pas** déclarée comme `static`, chaque instance de la classe `ExampleStatic` aurait sa propre copie indépendante de la variable `count`. Cela signifie que la valeur de `count` ne serait pas partagée entre les objets. Voici ce qui se passerait dans ce cas :
+
+---
+
+### Code modifié avec `count` non-`static` :
+```java
+class ExampleStatic {
+    int count = 0; // Variable non-static (individuelle pour chaque instance)
+
+    ExampleStatic() {
+        count++; // Incrémentation de la copie de "count" pour cet objet
+    }
+
+    void displayCount() {
+        System.out.println("Nombre d'objets créés (pour cet objet) : " + count);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        ExampleStatic obj1 = new ExampleStatic();
+        ExampleStatic obj2 = new ExampleStatic();
+        ExampleStatic obj3 = new ExampleStatic();
+
+        obj1.displayCount(); // Affiche 1
+        obj2.displayCount(); // Affiche 1
+        obj3.displayCount(); // Affiche 1
+    }
+}
+```
+
+---
+
+### Résultat attendu :
+- **`obj1.displayCount()`** : Affiche `1`.
+- **`obj2.displayCount()`** : Affiche `1`.
+- **`obj3.displayCount()`** : Affiche `1`.
+
+---
+
+### Explications :
+1. **Pas de partage de la variable `count`** :
+   - Avec `static`, la variable `count` est partagée entre toutes les instances, donc elle est incrémentée chaque fois qu'un nouvel objet est créé.
+   - Sans `static`, chaque objet possède sa propre copie de `count`, donc l'incrémentation est locale à l'objet.
+
+2. **Comportement attendu** :
+   - Lorsque `count` est déclaré sans `static`, chaque objet initialise sa propre copie de `count` à `0`.
+   - Lors de la construction de chaque objet, la copie de `count` de cet objet est incrémentée à `1`, mais les autres objets ne sont pas affectés.
+
+3. **Différence clé** :
+   - Avec `static`, `count` représente une donnée partagée globale à la classe.
+   - Sans `static`, `count` représente une donnée propre à chaque objet.
 
 ---
 
