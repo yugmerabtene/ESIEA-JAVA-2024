@@ -1,7 +1,131 @@
 ## 1-arrayList
 
 Une **ArrayList** en Java est une structure de données basée sur un tableau dynamique qui permet de stocker des éléments (objets) de manière flexible, sans avoir besoin de spécifier sa taille initiale.
+---
+Voici un exemple complet avec **toutes les principales méthodes de l'`ArrayList`** en Java, utilisé dans un contexte pratique.
 
+### Code complet
+```java
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        // Création d'une ArrayList de type String
+        ArrayList<String> items = new ArrayList<>();
+
+        // 1. Ajout d'éléments avec add()
+        items.add("Épée");
+        items.add("Bouclier");
+        items.add("Potion");
+        items.add("Arc");
+        System.out.println("Liste initiale : " + items);
+
+        // 2. Insertion à un index spécifique avec add(index, element)
+        items.add(2, "Flèche");
+        System.out.println("Après insertion à l'index 2 : " + items);
+
+        // 3. Récupération d'un élément avec get()
+        System.out.println("Élément à l'index 1 : " + items.get(1));
+
+        // 4. Modification d'un élément avec set()
+        items.set(0, "Épée magique");
+        System.out.println("Après modification de l'élément à l'index 0 : " + items);
+
+        // 5. Suppression d'un élément par index avec remove(index)
+        items.remove(3);
+        System.out.println("Après suppression de l'élément à l'index 3 : " + items);
+
+        // 6. Suppression d'un élément par valeur avec remove(object)
+        items.remove("Flèche");
+        System.out.println("Après suppression de l'élément 'Flèche' : " + items);
+
+        // 7. Vérification de la présence d'un élément avec contains()
+        System.out.println("Contient 'Potion' ? " + items.contains("Potion"));
+
+        // 8. Taille de la liste avec size()
+        System.out.println("Taille de la liste : " + items.size());
+
+        // 9. Vérification si la liste est vide avec isEmpty()
+        System.out.println("La liste est-elle vide ? " + items.isEmpty());
+
+        // 10. Parcours avec une boucle for-each
+        System.out.println("Parcours avec une boucle for-each :");
+        for (String item : items) {
+            System.out.println("- " + item);
+        }
+
+        // 11. Conversion en tableau avec toArray()
+        Object[] itemsArray = items.toArray();
+        System.out.print("Liste convertie en tableau : ");
+        for (Object obj : itemsArray) {
+            System.out.print(obj + " ");
+        }
+        System.out.println();
+
+        // 12. Suppression de tous les éléments avec clear()
+        items.clear();
+        System.out.println("Après avoir vidé la liste avec clear() : " + items);
+    }
+}
+```
+
+---
+
+### Explications des méthodes principales utilisées :
+
+1. **`add(element)`**  
+   Ajoute un élément à la fin de la liste.
+
+2. **`add(index, element)`**  
+   Insère un élément à un index spécifique.
+
+3. **`get(index)`**  
+   Récupère l'élément à un index donné.
+
+4. **`set(index, element)`**  
+   Remplace l'élément à un index donné par un autre élément.
+
+5. **`remove(index)`**  
+   Supprime l'élément à l'index donné.
+
+6. **`remove(object)`**  
+   Supprime le premier élément égal à la valeur donnée.
+
+7. **`contains(object)`**  
+   Vérifie si un élément est présent dans la liste.
+
+8. **`size()`**  
+   Renvoie le nombre d'éléments dans la liste.
+
+9. **`isEmpty()`**  
+   Vérifie si la liste est vide.
+
+10. **`toArray()`**  
+    Convertit l'`ArrayList` en tableau.
+
+11. **`clear()`**  
+    Supprime tous les éléments de la liste.
+
+---
+
+### Résultat attendu :
+```plaintext
+Liste initiale : [Épée, Bouclier, Potion, Arc]
+Après insertion à l'index 2 : [Épée, Bouclier, Flèche, Potion, Arc]
+Élément à l'index 1 : Bouclier
+Après modification de l'élément à l'index 0 : [Épée magique, Bouclier, Flèche, Potion, Arc]
+Après suppression de l'élément à l'index 3 : [Épée magique, Bouclier, Flèche, Arc]
+Après suppression de l'élément 'Flèche' : [Épée magique, Bouclier, Arc]
+Contient 'Potion' ? false
+Taille de la liste : 3
+La liste est-elle vide ? false
+Parcours avec une boucle for-each :
+- Épée magique
+- Bouclier
+- Arc
+Liste convertie en tableau : Épée magique Bouclier Arc 
+Après avoir vidé la liste avec clear() : []
+```
 ---
 
 ### **Caractéristiques principales d'une ArrayList**
