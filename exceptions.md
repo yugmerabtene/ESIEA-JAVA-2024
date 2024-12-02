@@ -116,6 +116,72 @@ try {
 - **Réutilisation :** Les exceptions personnalisées permettent une gestion plus précise et réutilisable des erreurs.
 
 ---
+Exemple d'implémentation en Java avec des classes séparées pour `Animal`, `Girafe`, et un programme principal qui gère une exception :
+
+### Classe `Animal.java`
+```java
+public class Animal {
+    private String nom;
+
+    public Animal(String nom) {
+        this.nom = nom;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void manger() {
+        System.out.println(nom + " mange.");
+    }
+}
+```
+
+---
+
+### Classe `Girafe.java`
+```java
+public class Girafe extends Animal {
+    public Girafe(String nom) {
+        super(nom);
+    }
+
+    public void mangerFeuillesHautes() throws Exception {
+        throw new Exception(getNom() + " ne peut pas atteindre les feuilles !");
+    }
+}
+```
+
+---
+
+### Classe `Main.java`
+```java
+public class Main {
+    public static void main(String[] args) {
+        try {
+            Girafe girafe = new Girafe("Gigi");
+            girafe.mangerFeuillesHautes(); // Lève une exception
+        } catch (Exception e) {
+            System.out.println("Exception capturée : " + e.getMessage());
+        }
+    }
+}
+```
+
+---
+
+### Explication
+1. **`Animal`** : La classe de base avec un nom et une méthode pour manger.
+2. **`Girafe`** : Hérite de `Animal` et ajoute une méthode `mangerFeuillesHautes` qui lève une exception.
+3. **`Main`** : Le point d'entrée, où une instance de `Girafe` est créée. Lorsqu'elle tente de manger des feuilles, une exception est levée, puis capturée dans un bloc `try-catch`.
+
+---
+
+### Résultat de l'exécution
+```
+Exception capturée : Gigi ne peut pas atteindre les feuilles !
+```
+
 
 #### **Exemple pratique : Gestion des âges**
 
