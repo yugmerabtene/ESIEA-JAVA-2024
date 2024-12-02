@@ -3,7 +3,7 @@
 Une **ArrayList** en Java est une structure de données basée sur un tableau dynamique qui permet de stocker des éléments (objets) de manière flexible, sans avoir besoin de spécifier sa taille initiale.
 ---
 Voici un exemple complet avec **toutes les principales méthodes de l'`ArrayList`** en Java, utilisé dans un contexte pratique.
-
+Exemple-01
 ### Code complet
 ```java
 import java.util.ArrayList;
@@ -174,7 +174,7 @@ Après avoir vidé la liste avec clear() : []
 
 ---
 
-### **Exemple avec ArrayList**
+### **Exemple-02 avec ArrayList**
 
 #### Création et manipulation
 ```java
