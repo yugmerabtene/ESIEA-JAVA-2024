@@ -248,7 +248,8 @@ src/
 │   ├── UserService.java
 │   └── IUserService.java
 │
-└── Main.java
+└── app
+    └──Main.java
 ```
 
 ### Code de chaque fichier
