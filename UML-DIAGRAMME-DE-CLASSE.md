@@ -1,247 +1,158 @@
-## 1. **Héritage** (`extends`)
-- **Relation :** Une classe hérite d'une autre (relation "is-a").
-- **Flèche UML :** **Triangle plein** à l'extrémité.
-- **Code UML :**
-  ```
-  Dog ---► Animal
-  ```
-- **Exemple en Java :**
-  ```java
-  class Animal {
-      void eat() {
-          System.out.println("This animal eats food.");
-      }
-  }
+![image](https://github.com/user-attachments/assets/c33c2f49-b653-4964-96f3-0895edd6ccc9)
 
-  class Dog extends Animal {
-      void bark() {
-          System.out.println("The dog barks.");
-      }
-  }
-  ```
 
----
+### 1. **Dépendance (Dependency)**
+**Définition** : Une classe utilise une autre classe de manière temporaire. La dépendance est faible.
 
-## 2. **Implémentation** (`implements`)
-- **Relation :** Une classe concrète implémente une ou plusieurs interfaces.
-- **Flèche UML :** **Triangle vide** à l'extrémité.
-- **Code UML :**
-  ```
-  Dog ---▷ Canine
-  ```
-- **Exemple en Java :**
-  ```java
-  interface Canine {
-      void run();
-  }
-
-  class Dog implements Canine {
-      public void run() {
-          System.out.println("The dog runs fast.");
-      }
-  }
-  ```
-
----
-
-## 3. **Association**
-- **Relation :** Un lien générique entre deux classes. Peut être unidirectionnel ou bidirectionnel.
-- **Flèche UML :** **Ligne simple** avec ou sans multiplicités.
-- **Code UML avec multiplicité :**
-  ```
-  Person 1 ------ * Car
-  ```
-- **Multiplicité détaillée :**
-  - **1 :** Exactement une instance.
-  - **0..1 :** Aucune ou une seule instance (optionnel).
-  - **1..* :** Au moins une instance.
-  - **0..* :** Aucune ou plusieurs instances.
-- **Exemple en Java :**
-  ```java
-  class Car {
-      String model;
-      Car(String model) {
-          this.model = model;
-      }
-  }
-
-  class Person {
-      List<Car> cars = new ArrayList<>();
-      void addCar(Car car) {
-          cars.add(car);
-      }
-  }
-  ```
-
----
-
-## 4. **Agrégation**
-- **Relation :** "Part-of" faible. La partie peut exister sans le tout.
-- **Flèche UML :** **Ligne avec un losange vide** côté conteneur.
-- **Code UML :**
-  ```
-  Team ◇------ Player
-  ```
-- **Exemple en Java :**
-  ```java
-  class Player {
-      String name;
-      Player(String name) {
-          this.name = name;
-      }
-  }
-
-  class Team {
-      List<Player> players = new ArrayList<>();
-      void addPlayer(Player player) {
-          players.add(player);
-      }
-  }
-  ```
-
----
-
-## 5. **Composition**
-- **Relation :** "Part-of" forte. La partie dépend du tout pour exister.
-- **Flèche UML :** **Ligne avec un losange plein** côté conteneur.
-- **Code UML :**
-  ```
-  House ◆------ Room
-  ```
-- **Exemple en Java :**
-  ```java
-  class Room {
-      Room() {
-          System.out.println("Room created.");
-      }
-  }
-
-  class House {
-      List<Room> rooms = new ArrayList<>();
-      House() {
-          rooms.add(new Room());
-          rooms.add(new Room());
-      }
-  }
-  ```
-
----
-
-## 6. **Dépendance**
-- **Relation :** Une classe dépend temporairement d'une autre (relation faible).
-- **Flèche UML :** **Ligne en pointillés avec flèche**.
-- **Code UML :**
-  ```
-  Printer - - - > Document
-  ```
-- **Exemple en Java :**
-  ```java
-  class Document {
-      String content;
-      Document(String content) {
-          this.content = content;
-      }
-  }
-
-  class Printer {
-      void print(Document doc) {
-          System.out.println("Printing: " + doc.content);
-      }
-  }
-  ```
-
----
-
-## 7. **Généralisation**
-- **Relation :** Représente un lien générique (relation "is-a").
-- **Flèche UML :** **Triangle plein**.
-- **Code UML :**
-  ```
-  Rectangle ---► Shape
-  ```
-- **Exemple en Java :**
-  ```java
-  abstract class Shape {
-      abstract void draw();
-  }
-
-  class Rectangle extends Shape {
-      void draw() {
-          System.out.println("Drawing a rectangle.");
-      }
-  }
-  ```
-
----
-
-## 8. **Réalisation**
-- **Relation :** Une classe réalise un contrat défini par une interface.
-- **Flèche UML :** **Ligne en pointillés avec un triangle vide**.
-- **Code UML :**
-  ```
-  Car - - ▷ Drivable
-  ```
-- **Exemple en Java :**
-  ```java
-  interface Drivable {
-      void drive();
-  }
-
-  class Car implements Drivable {
-      public void drive() {
-          System.out.println("The car is driving.");
-      }
-  }
-  ```
-
----
-
-## Multiplicité en détail :
-La **multiplicité** définit le nombre d'instances qui peuvent exister dans une relation entre deux classes. Elle est représentée par des nombres ou des plages (ex. `0..*`).
-
-| **Symbole** | **Description**                              | **Exemple UML**       |
-|-------------|----------------------------------------------|-----------------------|
-| `1`         | Exactement une instance                     | `Person 1 ------ 1 Car` |
-| `0..1`      | Aucune ou une seule instance (optionnel)     | `Person 0..1 ------ 1 Address` |
-| `1..*`      | Une ou plusieurs instances                  | `Person 1..* ------ Book` |
-| `0..*`      | Aucune ou plusieurs instances (optionnel)   | `Person 0..* ------ Phone` |
-
-### Exemple UML avec multiplicité :
-```
-Person 1 ------ * Car
-```
-Cela signifie :
-- Une personne (`Person`) possède **au moins une voiture** (`Car`).
-
----
-
-### Exemple Java avec multiplicité :
-#### Multiplicité 1:
 ```java
-class Person {
-    Car car; // Exactement une voiture.
+class A {
+    void useB() {
+        B b = new B();
+        b.display();
+    }
+}
+
+class B {
+    void display() {
+        System.out.println("Class B is being used by Class A");
+    }
+}
+
+public class DependencyExample {
+    public static void main(String[] args) {
+        A a = new A();
+        a.useB(); // A utilise B temporairement
+    }
 }
 ```
 
-#### Multiplicité 1..*:
-```java
-class Person {
-    List<Car> cars = new ArrayList<>(); // Une ou plusieurs voitures.
-}
-```
-
-#### Multiplicité 0..1:
-```java
-class Person {
-    Car car; // Optionnel : aucune ou une voiture.
-}
-```
-
-#### Multiplicité 0..*:
-```java
-class Person {
-    List<Car> cars = new ArrayList<>(); // Optionnel : aucune ou plusieurs voitures.
-}
-```
+**Explication** : La classe `A` crée une instance locale de la classe `B` dans sa méthode `useB`, montrant une relation de dépendance.
 
 ---
+
+### 2. **Agrégation (Aggregation)**
+**Définition** : Une classe contient une autre classe comme un attribut. Les deux peuvent exister indépendamment.
+
+```java
+class A {
+    private B b;
+
+    public A(B b) {
+        this.b = b;
+    }
+
+    void show() {
+        b.display();
+    }
+}
+
+class B {
+    void display() {
+        System.out.println("Class B is aggregated in Class A");
+    }
+}
+
+public class AggregationExample {
+    public static void main(String[] args) {
+        B b = new B();  // B peut exister seul
+        A a = new A(b); // B est "agrégé" dans A
+        a.show();
+    }
+}
+```
+
+**Explication** : La classe `A` a une instance de `B` passée en tant que paramètre dans le constructeur. L'objet `B` peut être utilisé ailleurs.
+
+---
+
+### 3. **Composition**
+**Définition** : Une classe possède une autre classe comme attribut, mais leur cycle de vie est lié (si A est détruit, B est détruit).
+
+```java
+class A {
+    private B b = new B();
+
+    void show() {
+        b.display();
+    }
+}
+
+class B {
+    void display() {
+        System.out.println("Class B is owned by Class A");
+    }
+}
+
+public class CompositionExample {
+    public static void main(String[] args) {
+        A a = new A();
+        a.show();
+        // B est détruit quand A est détruit
+    }
+}
+```
+
+**Explication** : Ici, la classe `A` crée l'objet `B` directement dans son attribut. La relation est plus forte que l'agrégation.
+
+---
+
+### 4. **Héritage (Inheritance)**
+**Définition** : Une classe dérivée hérite des propriétés et méthodes d'une classe de base.
+
+```java
+class A {
+    void display() {
+        System.out.println("Class A: Parent class");
+    }
+}
+
+class B extends A {
+    @Override
+    void display() {
+        super.display();
+        System.out.println("Class B: Child class");
+    }
+}
+
+public class InheritanceExample {
+    public static void main(String[] args) {
+        B b = new B();
+        b.display(); // Méthode héritée et surchargée
+    }
+}
+```
+
+**Explication** : La classe `B` hérite de `A` et peut utiliser ses méthodes tout en les redéfinissant grâce à l'annotation `@Override`.
+
+---
+
+### 5. **Réalisation (Realization)**
+**Définition** : Une classe implémente les méthodes d'une interface.
+
+```java
+interface A {
+    void display();
+}
+
+class B implements A {
+    @Override
+    public void display() {
+        System.out.println("Class B realizes interface A");
+    }
+}
+
+public class RealizationExample {
+    public static void main(String[] args) {
+        A a = new B(); // Interface utilisée comme type
+        a.display();
+    }
+}
+```
+
+**Explication** : La classe `B` réalise (implémente) l'interface `A`, obligeant `B` à fournir une implémentation pour les méthodes de `A`.
+
+---
+
+![image](https://github.com/user-attachments/assets/933c3cb6-ead1-4aa1-bcee-a82a2768072f)
+
+
