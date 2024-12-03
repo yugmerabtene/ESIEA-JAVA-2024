@@ -263,5 +263,67 @@ public class Main {
 
 
 
+---------------
+
+
+## Aller plus loin : 
+
+### 1. Association
+Une association indique une relation structurelle entre deux classes, signifiant que des objets d'une classe sont liés à des objets d'une autre classe. Elle est représentée par une ligne continue entre les classes concernées. Les associations peuvent être unidirectionnelles (avec une flèche indiquant la direction) ou bidirectionnelles (sans flèche).
+
+**Exemple :**
+```plaintext
+[Classe A] ───────── [Classe B]
+```
+
+### 2. Héritage (Généralisation)
+L'héritage, ou généralisation, décrit une relation hiérarchique où une classe enfant hérite des attributs et méthodes d'une classe parent. Cette relation est représentée par une ligne continue avec une flèche creuse pointant vers la classe parent.
+
+**Exemple :**
+```plaintext
+[Classe Parent] ◄────── [Classe Enfant]
+```
+
+### 3. Agrégation
+L'agrégation représente une relation « tout/partie » où une classe est composée de plusieurs instances d'une autre classe, sans dépendance forte entre elles. Elle est illustrée par une ligne continue avec un losange creux du côté de la classe « tout ».
+
+**Exemple :**
+```plaintext
+[Classe Tout] ◇─────── [Classe Partie]
+```
+
+### 4. Composition
+La composition est une forme stricte d'agrégation où la classe « partie » ne peut exister sans la classe « tout ». Elle est représentée par une ligne continue avec un losange plein du côté de la classe « tout ».
+
+**Exemple :**
+```plaintext
+[Classe Tout] ◆─────── [Classe Partie]
+```
+
+### 5. Dépendance
+Une dépendance indique qu'une classe dépend de l'autre pour fonctionner, généralement parce qu'elle utilise ses méthodes ou attributs. Elle est représentée par une ligne pointillée avec une flèche pointant vers la classe dont elle dépend.
+
+**Exemple :**
+```plaintext
+[Classe Dépendante] - - - - ▻ [Classe Indépendante]
+```
+
+### 6. Multiplicité
+La multiplicité précise le nombre d'instances d'une classe pouvant être associées à une instance d'une autre classe. Elle est indiquée par des annotations près des extrémités des associations.
+
+**Notations courantes :**
+- `1` : Exactement une instance.
+- `0..1` : Zéro ou une instance.
+- `*` ou `0..*` : Zéro ou plusieurs instances.
+- `1..*` : Au moins une instance.
+
+**Exemple :**
+```plaintext
+[Classe A] 1 ──────── * [Classe B]
+```
+Cela signifie qu'une instance de la Classe A peut être associée à plusieurs instances de la Classe B, mais chaque instance de la Classe B est associée à une seule instance de la Classe A.
+
+Pour une illustration complète de ces relations avec leurs notations UML, vous pouvez consulter le [guide complet sur les diagrammes de classes UML](https://www.cybermedian.com/fr/a-comprehensive-guide-to-uml-class-diagram/).
+
 
 
