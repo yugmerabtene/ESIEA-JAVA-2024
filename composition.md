@@ -103,6 +103,11 @@ Jean Dupont, 30 ans, habite à : 12 rue des Lilas, Paris
 Jean Dupont, 30 ans, habite à : 15 avenue des Champs, Paris
 ```
 
+### UML  
+
+![image](https://github.com/user-attachments/assets/92b6f2bd-52aa-42e7-9f81-25f6cb75f1b6)
+
+
 ### Avantages de la composition
 1. **Flexibilité** : Permet de réutiliser des classes sans les surcharger.
 2. **Encapsulation** : Les détails d'implémentation sont masqués.
