@@ -323,7 +323,11 @@ La multiplicité précise le nombre d'instances d'une classe pouvant être assoc
 ```
 Cela signifie qu'une instance de la Classe A peut être associée à plusieurs instances de la Classe B, mais chaque instance de la Classe B est associée à une seule instance de la Classe A.
 
-Pour une illustration complète de ces relations avec leurs notations UML, vous pouvez consulter le [guide complet sur les diagrammes de classes UML](https://www.cybermedian.com/fr/a-comprehensive-guide-to-uml-class-diagram/).
+Pour une illustration complète de ces relations avec leurs notations UML, vous pouvez consulter le [guide complet sur les diagrammes de classes UML](https://www.cybermedian.com/fr/a-comprehensive-guide-to-uml-class-diagram/).   
 
+
+## Documentation : 
+
+https://www.edrawsoft.com/fr/article/uml-aggregation-vs-composition.html
 
 
