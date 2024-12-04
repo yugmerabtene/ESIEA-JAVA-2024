@@ -1,7 +1,5 @@
 En Java, le mot-clé **`static`** est utilisé pour indiquer qu’un membre (variable, méthode, ou bloc) appartient à la classe elle-même plutôt qu’à une instance spécifique de cette classe. Cela signifie que vous n'avez pas besoin de créer un objet pour accéder à un membre `static`.
 
-Voici une explication avec des exemples pour mieux comprendre :
-
 ---
 
 ### 1. **Variable `static`**
