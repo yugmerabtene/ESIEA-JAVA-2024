@@ -112,5 +112,3 @@ Jean Dupont, 30 ans, habite à : 15 avenue des Champs, Paris
 1. **Flexibilité** : Permet de réutiliser des classes sans les surcharger.
 2. **Encapsulation** : Les détails d'implémentation sont masqués.
 3. **Évolutivité** : Plus simple à maintenir et à étendre comparé à l'héritage.
-
-Si tu as besoin d’un exemple plus avancé ou dans un contexte particulier, fais-le-moi savoir ! 😊
