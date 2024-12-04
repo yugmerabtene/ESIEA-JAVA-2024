@@ -26,6 +26,92 @@ Nous allons créer un système de gestion des utilisateurs où :
 1. Une `HashMap` est utilisée pour stocker des utilisateurs.
 2. Des exceptions personnalisées sont levées pour signaler les erreurs.
 3. Le programme principal attrape ces exceptions dans des blocs `try-catch`.
+---
+Principales méthodes disponibles dans la classe **`HashMap`** de Java :
+
+### **Méthodes de base :**
+
+1. **`put(K key, V value)`**  
+   Ajoute une paire clé-valeur à la map. Si la clé existe déjà, la valeur associée est remplacée.
+
+2. **`get(Object key)`**  
+   Retourne la valeur associée à une clé donnée, ou `null` si la clé n'est pas présente.
+
+3. **`remove(Object key)`**  
+   Supprime la clé (et la valeur associée) de la map.
+
+4. **`containsKey(Object key)`**  
+   Vérifie si une clé donnée est présente dans la map.
+
+5. **`containsValue(Object value)`**  
+   Vérifie si une valeur donnée est présente dans la map.
+
+6. **`size()`**  
+   Retourne le nombre de paires clé-valeur dans la map.
+
+7. **`isEmpty()`**  
+   Vérifie si la map est vide (retourne `true` si elle ne contient aucune entrée).
+
+8. **`clear()`**  
+   Supprime toutes les paires clé-valeur de la map.
+
+---
+
+### **Méthodes avancées :**
+
+9. **`putIfAbsent(K key, V value)`**  
+   Ajoute une paire clé-valeur seulement si la clé n'est pas déjà présente.
+
+10. **`replace(K key, V value)`**  
+    Remplace la valeur associée à une clé donnée, uniquement si elle existe.
+
+11. **`replace(K key, V oldValue, V newValue)`**  
+    Remplace la valeur d'une clé seulement si la valeur actuelle correspond à `oldValue`.
+
+12. **`getOrDefault(Object key, V defaultValue)`**  
+    Retourne la valeur associée à une clé, ou une valeur par défaut si la clé n'existe pas.
+
+13. **`merge(K key, V value, BiFunction<? super V, ? super V, ? extends V> remappingFunction)`**  
+    Combine une nouvelle valeur avec une ancienne valeur associée à une clé à l’aide de la fonction donnée.
+
+14. **`compute(K key, BiFunction<? super K, ? super V, ? extends V> remappingFunction)`**  
+    Calcule une nouvelle valeur pour une clé donnée, avec ou sans sa valeur existante.
+
+15. **`computeIfAbsent(K key, Function<? super K, ? extends V> mappingFunction)`**  
+    Calcule une valeur et l’ajoute à la map si la clé n’a pas de valeur associée.
+
+16. **`computeIfPresent(K key, BiFunction<? super K, ? super V, ? extends V> remappingFunction)`**  
+    Modifie la valeur d'une clé seulement si elle existe déjà dans la map.
+
+---
+
+### **Itération et manipulation des clés/valeurs :**
+
+17. **`keySet()`**  
+    Retourne une vue de l'ensemble des clés (type `Set<K>`).
+
+18. **`values()`**  
+    Retourne une vue de toutes les valeurs (type `Collection<V>`).
+
+19. **`entrySet()`**  
+    Retourne une vue des paires clé-valeur sous forme d'un ensemble (`Set<Map.Entry<K, V>>`).
+
+20. **`forEach(BiConsumer<? super K, ? super V> action)`**  
+    Exécute une action pour chaque paire clé-valeur.
+
+---
+
+### **Comparaison et clonage :**
+
+21. **`equals(Object o)`**  
+    Compare cette map avec un autre objet pour vérifier leur égalité.
+
+22. **`hashCode()`**  
+    Retourne le code de hachage pour cette map.
+
+23. **`clone()`**  
+    Crée une copie superficielle de la map.
+
 
 ---
 
