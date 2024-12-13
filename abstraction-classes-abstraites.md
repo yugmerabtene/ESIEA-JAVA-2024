@@ -134,8 +134,8 @@ public class SubscriptionManager {
 }
 ```
 ### UML :  
+![image](https://github.com/user-attachments/assets/ee716af6-b509-461f-b237-458897582023)
 
-![image](https://github.com/user-attachments/assets/92bfa7dd-c127-4f94-9f09-16e6524fb766)
 
 ---
 
