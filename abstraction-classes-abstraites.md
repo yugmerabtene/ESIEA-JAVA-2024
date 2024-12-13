@@ -154,11 +154,6 @@ public class SubscriptionManager {
 
 Avec ce modèle, le code devient **extensible**, **organisé**, et **orienté vers la réutilisabilité**.
 
-## exemple UML : 
-Est défini avec {classe abstraite}
-
-![image](https://github.com/user-attachments/assets/e90a947b-10ec-4f90-ae63-625b367a8583)
-
 
 
 
